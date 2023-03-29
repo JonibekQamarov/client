@@ -1,0 +1,139 @@
+.events {
+  margin-bottom: 96px;
+  transition: padding-bottom 0.5s ease;
+
+  @media only screen and (max-width: $tablet-l) {
+    padding-bottom: 64px;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    padding-bottom: 48px;
+  }
+
+  &--erm {
+    .events__inner {
+      flex-direction: column;
+
+      .events__inner-part {
+        max-width: 768px;
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+.events__inner {
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: space-around;
+}
+
+.events__inner-part {
+  flex-grow: 1;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media only screen and (max-width: $mobile) {
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+.events__title {
+  @include for-headings(h4);
+  margin-bottom: 48px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 1px;
+    flex-grow: 1;
+    background-color: #e5e5e5;
+  }
+}
+
+.events__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.events__inner-part {
+  border-radius: 8px;
+  background-color: #bef3c0;
+  padding: 32px 48px 40px 40px;
+  display: flex;
+  gap: 24px;
+  min-height: 190px;
+}
+
+.events__date-title {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+}
+
+.events__date-title-inner {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.events__next-wrapper {
+  max-width: 380px;
+}
+
+.events__next-title {
+  @include special-title;
+  display: flex;
+  margin-bottom: 8px;
+  align-items: center;
+  gap: 24px;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 44px;
+    height: 2px;
+    background-color: var(--text-color);
+
+    @media only screen and (max-width: $mobile) {
+      display: none;
+    }
+    @media only screen and (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: $mobile) {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.events__next-subtitle {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.events__arrow-btn {
+  border: none;
+  background-color: var(--primary-bg-color);
+  display: inline-block;
+  cursor: pointer;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  align-self: center;
+}

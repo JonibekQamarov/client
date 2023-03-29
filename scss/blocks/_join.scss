@@ -1,0 +1,51 @@
+/* JOIN */
+.join {
+  padding: 96px 0;
+  transition: padding 0.5s ease;
+
+  @media only screen and (max-width: $tablet-l) {
+    padding: 64px 0;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    padding: 48px 0;
+  }
+}
+
+.join__inner {
+  background: url("../images/join-bg.png") no-repeat center / cover;
+  border-radius: 12px;
+  padding: 93px 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  
+  @media only screen and (max-width: $mobile) {
+    padding: 67px 30px;
+  }
+}
+
+.join__heading {
+  max-width: 630px;
+  @include for-headings(h3);
+  width: 100%;
+  line-height: 1.2;
+  margin: 0;
+  margin-bottom: 32px;
+  color: #fff;
+}
+
+.join__button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+
+  
+  @media only screen and (max-width: $mobile) {
+    flex-wrap: wrap;
+  }
+}

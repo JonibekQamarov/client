@@ -1,0 +1,129 @@
+/* CUSTOM PROPS */
+:root {
+  --primary-bg-color: #fff;
+  --text-color: #1d2130;
+  --secondary-text-color: #1d2130;
+  --primary-green: #70c174;
+  --primary-light: #eff7f2;
+}
+
+/* GLOBAL */
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+*:focus {
+  outline: 2px dashed var(--text-color);
+  outline-offset: 3px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  height: 100%;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-color);
+  background-color: var(--primary-bg-color);
+  display: flex;
+  flex-direction: column;
+  margin-top: 71px;
+  transition: margin-top 0.5s ease;
+
+  @media only screen and (max-width: $tablet) {
+    margin-top: 50px;
+  }
+
+  &.blocked {
+    overflow: hidden;
+  }
+}
+
+/* SCROLL BAR */
+::-webkit-scrollbar {
+  @media only screen and (min-width: $tablet) {
+    width: 12px;
+  }
+}
+
+::-webkit-scrollbar-track {
+  @media only screen and (min-width: $tablet) {
+    border-radius: 8px;
+    box-shadow: inset 0 0 5px grey;
+  }
+}
+
+::-webkit-scrollbar-thumb {
+  @media only screen and (min-width: $tablet) {
+    background: rgb(110, 110, 110);
+    border-radius: 10px;
+
+    &:hover {
+      background: rgb(110, 110, 110);
+    }
+  }
+}
+
+/* VISUALLY HIDDEN */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* MAIN CONTENT */
+.main-content {
+  flex-grow: 1;
+}
+
+.primary-button {
+  border: none;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  background-color: var(--primary-green);
+  padding: 16px 32px;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.secondary-button {
+  border: none;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  background-color: var(--primary-bg-color);
+  color: #1d2130;
+  padding: 16px 32px;
+  border-radius: 4px;
+}
